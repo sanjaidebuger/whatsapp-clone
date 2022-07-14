@@ -1,10 +1,10 @@
 import React from 'react'
+import "./App.css";
 import Login from "./components/login/login";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
+    <div className='app'>
       <Login />
     </div>
   )

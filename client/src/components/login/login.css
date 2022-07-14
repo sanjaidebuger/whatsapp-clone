@@ -6,7 +6,7 @@
     place-items: center;
   }
   
-  .login__container {
+  .login_container {
     padding: 100px;
     text-align: center;
     background-color: white;
@@ -14,15 +14,15 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px;
   }
   
-  .login__container > img {
+  .login_container > img {
     object-fit: contain;
     height: 100px;
     margin-bottom: 40px;
   }
   
-  .login__container > button {
+  .login_container > button {
     margin-top: 50px;
     text-transform: inherit !important;
-    background-color: #0a8d4d !important;
+    background-color: #0eba67 !important;
     color: white;
   }

@@ -14,7 +14,6 @@ const login = () => {
     })
   }
 
-
   return (
     <div className='login'>
       <div className='login_container'>
@@ -28,4 +27,4 @@ const login = () => {
   )
 }
 
-export default login
+export default login 
