@@ -4,7 +4,7 @@ import { useStateValue } from './components/ContextApi/StateProvider';
 import Login from "./components/login/login";
 import {BrowserRouter as Router,Routes ,Route} from "react-router-dom";
 import Chat from './components/Chat/Chat';
-import Sidebar from "";
+import Sidebar from './components/Sidebar/Sidebar';
 
 
 
@@ -19,7 +19,7 @@ const App = () => {
         ) : (
           <div className="app__body">
             <Router>
-              <Sidebar />
+            <Sidebar />
               <Routes>
               <Route path="/rooms/:roomId" element={<Chat />} />
                 <Route exact path="/" element={<Chat />} />
