@@ -12,6 +12,7 @@ const Sidebar = () => {
            <Avatar 
            src={user.photoURL}
            />
+           <h1>Hello world</h1>
         </div>
     </div>
   )
