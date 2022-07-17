@@ -3,16 +3,24 @@ import { Button } from '@mui/material';
 import { auth, provider } from "../../firebase";
 import { signInWithPopup } from 'firebase/auth';
 import "./login.css";
+import { useStateValue } from '../ContextApi/StateProvider';
+import { actionTypes } from '../ContextApi/reducer';
 
-const login = () => {
-
+const Login = () => {
+  // eslint-disable-next-line
+const [state, dispatch] = useStateValue();
   const signIn = () => {
-    signInWithPopup(auth, provider).then((result) => {
-      console.log(result);
-    }).catch((err) => {
-      alert(err.message)
-    })
-  }
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
 
   return (
     <div className='login'>
@@ -27,4 +35,4 @@ const login = () => {
   )
 }
 
-export default login 
+export default Login ;

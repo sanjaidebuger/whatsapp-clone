@@ -5,7 +5,6 @@ import App from './App';
 import reducer ,{ initialState } from './components/ContextApi/reducer';
 import { StateProvider} from "./components/ContextApi/StateProvider";
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,5 +13,3 @@ root.render(
     </StateProvider>
   </React.StrictMode>
 );
-
-
