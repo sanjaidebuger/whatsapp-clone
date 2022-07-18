@@ -2,7 +2,8 @@ import React from 'react';
 import "./Sidebar.css";
 import {Avatar , IconButton} from "@mui/material";
 import {useStateValue} from '../ContextApi/StateProvider';
-import {Chat, DonutLarge, MoreVert} from '@mui/icons-material';
+import {Chat, DonutLarge, MoreVert , SearchOutlined} from '@mui/icons-material';
+import SidebarChat from '../SidebarChat/SidebarChat';
 
 const Sidebar = () => {
   const [{user}] = useStateValue();
@@ -24,6 +25,18 @@ const Sidebar = () => {
               <MoreVert />
             </IconButton>
            </div>
+        </div>
+        <div className='sidebar__search'>
+          <div className='sidebar__searchContainer'>
+            <SearchOutlined />
+            <input placeholder='Search or Start new chat' />
+          </div>
+        </div>
+        <div className='sidebar__chats' >
+        <SidebarChat />
+        <SidebarChat />
+        
+
         </div>
     </div>
   )
