@@ -1,7 +1,8 @@
 import React from 'react';
 import "./Sidebar.css";
-import {Avatar} from "@mui/material";
+import {Avatar , IconButton} from "@mui/material";
 import {useStateValue} from '../ContextApi/StateProvider';
+import 
 
 const Sidebar = () => {
   const [{user}] = useStateValue();
@@ -12,7 +13,11 @@ const Sidebar = () => {
            <Avatar 
            src={user.photoURL}
            />
-           <h1>Hello world</h1>
+           <div className='sidebar__header'>
+            <IconButton>
+              <DonutLarge />
+            </IconButton>
+           </div>
         </div>
     </div>
   )
