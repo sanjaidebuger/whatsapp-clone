@@ -4,11 +4,9 @@ import { Avatar } from "@mui/material";
 import { useState ,useEffect } from 'react';
 
 
-
-// eslint-disable-next-line
 const SidebarChat = (addNewChat) => {
+  // eslint-disable-next-line
  const [seed, setSeed] = useState("");
- 
 
   useEffect(()=>{
   setSeed(Math.floor(Math.random()*5000));
@@ -17,7 +15,7 @@ const SidebarChat = (addNewChat) => {
   return !addNewChat ? (
     <div className='sidebarChat'>
       <Avatar 
-      src={"https://avatars.dicebear.com/api/human/a23.svg"}
+      src={"https://avatars.dicebear.com/api/human/${seed}.svg"}
       />
       <div className="sidebarChat__info">
           <h2>whatsapp clone</h2>
