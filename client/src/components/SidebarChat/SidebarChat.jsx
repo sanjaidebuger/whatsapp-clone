@@ -3,8 +3,8 @@ import "./SidebarChat.css";
 import { Avatar } from "@mui/material";
 
 
-const SidebarChat = (addNewChat) => {
- // eslint-disable-next-line
+const SidebarChat = ({addNewChat}) => {
+
 const [seed, setSeed] = useState("");
 
 useEffect(() => {
